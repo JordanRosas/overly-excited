@@ -57,13 +57,36 @@ function addExcitement (theWordArray, customSymbol) {
         remainder, add an exclamation point to the end of
         the word and then concatenate it to `buildMeUp`*/
         if( i !== 0 && i % 3 === 0 ){ 
-            buildMeUp += " " + theWordArray[i] + customSymbol
+            buildMeUp += theWordArray[i] + (customSymbol)
         /* Otherwise, just concatenate the word itself.*/
         }else{
-            buildMeUp +=  " " + theWordArray[i];
+            buildMeUp += theWordArray[i] + " ";
         }
         // Print buildMeUp to the console
-        console.log(buildMeUp, customSymbol);
+        console.log(buildMeUp);
     }
 }
-addExcitement(sentence, "*")
+addExcitement(sentence, "* ")
+
+/*==================================arrow Function.============================================*/
+
+let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
+
+let addExcitement = (theWordArray, s) => {
+    let buildMeUp = ""
+
+    for (let i = 0; i < theWordArray.length; i++) {
+        /*If the current value of `i` divided by 3 has no
+        remainder, add an exclamation point to the end of
+        the word and then concatenate it to `buildMeUp`*/
+        if( i !== 0 && i % 3 === 0 ){ 
+            buildMeUp += theWordArray[i] + (s)
+        /* Otherwise, just concatenate the word itself.*/
+        }else{
+            buildMeUp += theWordArray[i] + " ";
+        }
+        // Print buildMeUp to the console
+        console.log(buildMeUp);
+    }
+}
+addExcitement(sentence, "? ")
