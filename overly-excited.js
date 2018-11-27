@@ -22,11 +22,34 @@
 // // Invoke the function and pass in the array
 // addExcitement(sentence)
 
-/*==========================================Some Words are more exciting=================================================== */
+// /*==========================================Some Words are more exciting=================================================== */
+
+// let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
+
+// function addExcitement (theWordArray) {
+//     let buildMeUp = ""
+
+//     for (let i = 0; i < theWordArray.length; i++) {
+//         /*If the current value of `i` divided by 3 has no
+//         remainder, add an exclamation point to the end of
+//         the word and then concatenate it to `buildMeUp`*/
+//         if( i !== 0 && i % 3 === 0 ){ 
+//             buildMeUp += " " + theWordArray[i] + "!"
+//         /* Otherwise, just concatenate the word itself.*/
+//         }else{
+//             buildMeUp +=  " " + theWordArray[i];
+//         }
+//         // Print buildMeUp to the console
+//         console.log(buildMeUp);
+//     }
+// }
+// addExcitement(sentence)
+
+/*==================================Function arguments============================================*/
 
 let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
-function addExcitement (theWordArray) {
+function addExcitement (theWordArray, customSymbol) {
     let buildMeUp = ""
 
     for (let i = 0; i < theWordArray.length; i++) {
@@ -34,13 +57,13 @@ function addExcitement (theWordArray) {
         remainder, add an exclamation point to the end of
         the word and then concatenate it to `buildMeUp`*/
         if( i !== 0 && i % 3 === 0 ){ 
-            buildMeUp += " " + theWordArray[i] + "!"
+            buildMeUp += " " + theWordArray[i] + customSymbol
         /* Otherwise, just concatenate the word itself.*/
         }else{
             buildMeUp +=  " " + theWordArray[i];
         }
         // Print buildMeUp to the console
-        console.log(buildMeUp);
+        console.log(buildMeUp, customSymbol);
     }
 }
-addExcitement(sentence)
+addExcitement(sentence, "*")
